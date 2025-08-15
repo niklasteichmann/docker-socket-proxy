@@ -30,4 +30,3 @@ if [ "$1" = 'haproxy' ]; then
 fi
 
 exec "$@"
-
