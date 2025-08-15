@@ -41,6 +41,7 @@ never happen.
 
         $ docker container run \
             -d \
+            --group-add "$(getent group docker | cut -d: -f3)" \
             --name dockerproxy \
             -v /var/run/docker.sock:/var/run/docker.sock \
             -p 127.0.0.1:2375:2375 \
